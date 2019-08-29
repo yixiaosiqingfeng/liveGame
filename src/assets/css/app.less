@@ -1,0 +1,429 @@
+@import './_variable.less';
+
+/* 基础标签格式化 */
+
+/* 基础标签格式化 */
+
+html {
+  font-family: sans-serif;
+  color: @black;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  /* 解决IOS默认滑动很卡的情况 */
+  -webkit-overflow-scrolling : touch;
+}
+
+/* 禁止缩放表单 */
+input[type="submit"], input[type="reset"], input[type="button"], input {
+  resize: none;
+  border: none;
+}
+
+/* 取消链接高亮  */
+body, div, ul, li, ol, h1, h2, h3, h4, h5, h6, input, textarea, select, p, dl, dt, dd, a, img, button, form, table, th, tr, td, tbody, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* 设置HTML5元素为块 */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* 初始化 */
+body, div, ul, li, ol, h1, h2, h3, h4, h5, h6, input, textarea, select, p, dl, dt, dd, a, img, button, form, table, th, tr, td, tbody, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  // 1.5是行高（line-height）.1.5表示是12px的1.5倍，即font: 12px;line-height: 1.5。也可以理解font-size:12px;line-height:1.5em，即字符高度的1.5倍。
+  font: 12px/1.5 sans-serif,'Microsoft YaHei','宋体', Tahoma, Arial ;
+  color: #555;
+  background-color: #F7F7F7;
+}
+em, i {
+  font-style: normal;
+}
+ul,li{
+  list-style-type: none;
+}
+strong {
+  font-weight: normal;
+}
+a {
+  text-decoration: none;
+  color: #969696;
+  font-family: sans-serif,'Microsoft YaHei', Tahoma, Arial, ;
+}
+a:hover {
+  text-decoration: none;
+}
+/* 移动端点击a链接出现蓝色背景问题解决 */
+a:link,a:active,a:visited,a:hover {
+  background: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
+}
+ul, ol {
+  list-style: none;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-family: sans-serif,'Microsoft YaHei';
+}
+img {
+  border: none;
+}
+input{
+  font-family: sans-serif,'Microsoft YaHei';
+}
+// 清除浮动
+.clearfix:after {
+  content: "";
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+}
+.clearfix {
+  zoom: 1;
+}
+
+/* 格式化 end */ 
+
+
+
+/* hide the ad */
+#_embed_v3_dc {
+  display: none !important;
+}
+
+
+/* cover mint-ui css */
+.mint-header {
+  // background-color: @header-bgc;
+  font-size: .16rem;
+  &.bar-header {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    .bar-r {
+      font-size: .15rem;
+    }
+  }
+}
+
+// progress
+.mt-range-progress{
+  background-color: rgb(209, 68, 68) !important;
+}
+.mt-range-thumb{
+  width: 10px !important;
+  border-radius: 10% !important;
+}
+
+// navbar
+.mint-navbar {
+  .mint-tab-item {
+    &.is-selected {
+      color: @primary;
+      // border-bottom: 2px solid @primary;
+      // margin-bottom: -1px;
+    }
+  }
+  .mint-tab-item-label {
+    font-size: .14rem;
+  }
+}
+
+
+
+// cell
+.mint-cell {
+  background-color: @white;
+  font-size: .15rem;
+  border-bottom: 1px solid @border-c;
+  &:last-child {
+    background-size: 0;
+  }
+  .mint-field-core {
+    background-color: @bgc;
+  }
+}
+
+.mint-cell-wrapper {
+  font-size: inherit;
+  background-size: 0;
+  padding: 15px 10px;
+}
+
+.mint-cell-value {
+  color: #999;
+  font-size: .13rem;
+}
+
+.mint-cell-allow-right::after {
+  right: .15rem;
+  width: .08rem;
+  height: .08rem;
+}
+
+
+.mint-button--danger.is-plain {
+  border-color: @primary;
+  color: @primary;
+}
+.mint-cell-allow-left::after {
+  border: solid 2px #c8c8cd;
+  border-top-width: 0;
+  border-right-width: 0;
+  content: " ";
+  top: 50%;
+  right: 20px;
+  position: absolute;
+  left: .15rem;
+  width: .08rem;
+  height: .08rem;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+/* toast */
+.mint-toast {
+  z-index: 5000;
+}
+
+
+
+html {
+  // font-family: 'Avenir', Helvetica, Arial, 'Microsoft YaHei', sans-serif;
+  font-family: sans-serif;
+  // font-size: 625%;
+  color: @black;
+}
+
+body {
+  // font-size: 12px;
+  background: @bgc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+input:disabled {
+  // background-color: @gray-white;
+  opacity: .6;
+}
+
+
+#app {
+  // height: 100vh;
+  .page {
+    box-sizing: border-box;
+    min-height: 100%;
+  }
+}
+
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.show {
+  display: block !important;
+}
+
+.hide {
+  display: none !important;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+
+/* img image */
+.img-block {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.img-w {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+}
+.img-h {
+  display: block;
+  width: auto;
+  height: 100%;
+  max-width: 100%;
+}
+.img-response {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+.flex {
+  display: flex;
+}
+.flex-v {
+  display: flex;
+  flex-direction: column;
+}
+.flex-item {
+  flex: 1;
+  text-align: center;
+}
+
+
+.page-has-header {
+  // padding-top: 6vh !important;
+}
+
+.page-has-tabbar {
+  // padding-bottom: 25px !important;
+}
+
+.page-ft-fixed {
+  position: fixed;
+  z-index: 100;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: .45rem;
+  background-color: #fff;
+}
+
+/* transition */
+.slide-enter-active, .slide-leave-active {
+  transition: all .3s;
+}
+.slide-enter, .slide-leave-to {
+  transform: translateX(100%);
+  opacity: 0;
+  // height: 0;
+}
+
+/* btn */
+.btn {
+  height: .45rem;
+  margin: .3rem 0 .2rem;
+  font-size: .16rem;
+}
+.btn-primary {
+  .btn;
+  background-color: @primary;
+}
+.btn-confirm {
+  height: .35rem;
+  margin: 0;
+  font-size: .14rem;
+  background-color: @primary;
+}
+.btn-show-captcha {
+  background-color: transparent !important;
+  color: @gray-light !important;
+}
+
+
+/* text */
+.text-dynamic {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+/* loading */
+.loading-container {
+  width: 100%;
+  height: .4rem;
+  line-height: .4rem;
+  .mint-spinner-triple-bounce {
+    text-align: center;
+  }
+  .finished-text {
+    text-align: center;
+    color: @gray-light;
+  }
+}
+
+
+/* result empty */
+.empty-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0 .1rem;
+  img {
+      width: 1.1rem;
+      height: auto;
+  }
+  p {
+      color: @gray-light;
+      font-size: .14rem;
+      margin-top: .12rem;
+  }
+}
+
+
+/* like comment components input container */
+.comment-input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .input-comment {
+    flex: 1;
+    padding: .1rem;
+    margin-right: .1rem;
+    border-radius: .05rem;
+    border: 1px solid @gray-white;
+  }
+  .btn-comment {
+    color: @white;
+    border-radius: .1rem;
+    background-color: @primary;
+    font-size: .12rem;
+    padding: 0 .15rem;
+  }
+}
+
+
+/* avatar just include first username */
+.text-face {
+  width: .4rem;
+  height: .4rem;
+  line-height: .4rem;
+  border-radius: 50%;
+  font-size: .14rem;
+}
